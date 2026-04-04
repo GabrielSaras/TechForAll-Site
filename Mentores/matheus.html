@@ -1,20 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <title>Matheus Rocha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perfil de Matheus Rocha — Designer Gráfico e mentor voluntário na Tech for All.">
+    <title>Matheus Rocha - Tech for All</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <h1>Perfil do Matheus</h1>
-    <p>Página em construção...</p>
+    <!-- ============================================================
+         OVERLAY: Fundo escurecido do menu mobile
+         ============================================================ -->
+    <div class="menu-overlay" role="presentation" aria-hidden="true"></div>
 
-    <a href="index.html">
-        <button>⬅️ Voltar</button>
-    </a>
+    <!-- ============================================================
+         HEADER: Navegação padrão do projeto
+         ============================================================ -->
+    <header role="banner">
+        <a href="../index.html" class="logo-link" aria-label="Tech for All — Página Inicial">
+            <h1>Tech <span>For</span> All</h1>
+        </a>
+
+        <button class="hamburger"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+                aria-controls="menu-principal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="menu" id="menu-principal" role="navigation" aria-label="Menu principal">
+            <a href="../index.html">🏠 Início</a>
+            <a href="../pages/curso.html">📚 Cursos</a>
+            <a href="../Mentores/mentor.html">👥 Mentores</a>
+            <a href="../cadastro/quero-ser-mentor.html">👨‍🏫 Ser Mentor</a>
+            <a href="../cadastro/quero-ser-aluno.html" class="btn-menu">🚀 Quero Aprender</a>
+        </nav>
+    </header>
+
+    <!-- ============================================================
+         MAIN: Perfil completo de Matheus Rocha
+         Segue o mesmo padrão de gabriel.html e vanessa.html
+         ============================================================ -->
+    <main class="perfil-mentor">
+
+        <!-- ============================================================
+             CABEÇALHO DO PERFIL: Foto, nome e especialidade
+             ============================================================ -->
+        <section class="perfil-cabecalho">
+            <!-- Foto do mentor — loading="lazy" para performance -->
+            <img src="../pages/imagens/img_mentores/matheus.jpeg"
+                 alt="Foto de Matheus Rocha — Designer Gráfico e mentor"
+                 class="foto-mentor"
+                 loading="lazy">
+
+            <div class="info-mentor">
+                <h1>Matheus Rocha</h1>
+                <h2>🎨 Designer Gráfico</h2>
+                <p>Especialista em identidade visual e comunicação criativa</p>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             BIOGRAFIA: Apresentação pessoal e profissional
+             ============================================================ -->
+        <section class="biografia">
+            <h3>🖌️ Sobre mim</h3>
+            <p>
+                Designer Gráfico com 4+ anos de experiência em projetos de branding,
+                identidade visual e comunicação digital. Apaixonado por criar soluções
+                visuais que comunicam com clareza e impacto. Já auxiliei mais de 30
+                alunos a ingressarem na área criativa de tecnologia.
+            </p>
+        </section>
+
+        <!-- ============================================================
+             HABILIDADES: O que o mentor ensina
+             ============================================================ -->
+        <section class="habilidades">
+            <h3>🎯 O que eu ensino</h3>
+            <ul class="lista-habilidades">
+                <li>Identidade Visual & Branding</li>
+                <li>Adobe Photoshop & Illustrator</li>
+                <li>Figma para Design Gráfico</li>
+                <li>Design para Redes Sociais</li>
+                <li>Tipografia e Teoria das Cores</li>
+            </ul>
+        </section>
+
+        <!-- ============================================================
+             DISPONIBILIDADE: Dias e horários para aulas
+             ============================================================ -->
+        <section class="disponibilidade">
+            <h3>📅 Disponível para aulas</h3>
+            <p><strong>Quartas e Sábados</strong> | 14h às 18h</p>
+            <p>Formato: Online via Google Meet</p>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         BOTÕES DE AÇÃO: Inscrição e retorno
+         ============================================================ -->
+    <section class="botoes-acao">
+        <a href="../cadastro/quero-ser-aluno.html" class="btn-primary"
+           aria-label="Inscrever-se como aluno de Matheus Rocha">
+            🚀 Quero ser seu aluno!
+        </a>
+        <a href="../index.html" class="btn-secundario">
+            ⬅️ Voltar ao Início
+        </a>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-marca">
+                <h3>Tech <span>For</span> All</h3>
+                <p>Democratizando o acesso à tecnologia através de mentoria voluntária gratuita.</p>
+            </div>
+            <nav class="footer-col" aria-label="Navegação do rodapé">
+                <h4>Navegação</h4>
+                <a href="../index.html">Início</a>
+                <a href="../pages/curso.html">Cursos</a>
+                <a href="../Mentores/mentor.html">Mentores</a>
+            </nav>
+            <nav class="footer-col" aria-label="Participar">
+                <h4>Participe</h4>
+                <a href="../cadastro/quero-ser-aluno.html">Quero Aprender</a>
+                <a href="../cadastro/quero-ser-mentor.html">Ser Mentor</a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>Feito com <span aria-label="amor">♥</span> pela equipe Tech for All — 2026</p>
+        </div>
+    </footer>
+
+    <script src="../script/script.js"></script>
 
 </body>
-
 </html>
