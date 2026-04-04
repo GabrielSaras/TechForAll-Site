@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech for All - Mentoria Gratuita</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- OVERLAY MENU MOBILE -->
+    <div class="menu-overlay"></div>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Tech <span>For</span> All</h1>
+
+        <!-- BOTÃO HAMBÚRGUER (aparece só no mobile) -->
+        <button class="hamburger" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- MENU DE NAVEGAÇÃO -->
+        <nav class="menu">
+            <a href="index.html">🏠 Início</a>
+            <a href="pages/curso.html">📚 Cursos</a>
+            <a href="Mentores/mentor.html">👥 Mentores</a>
+            <a href="cadastro/quero-ser-mentor.html">👨‍🏫 Ser Mentor</a>
+            <a href="cadastro/quero-ser-aluno.html" class="btn-menu">🚀 Quero Aprender</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <span class="hero-badge">✨ Plataforma 100% Gratuita</span>
+
+        <h2>Tecnologia não é<br><span class="destaque">Privilégio.</span></h2>
+        <h3>É conhecimento para todos.</h3>
+
+        <p>Conectando voluntários em tecnologia com quem quer aprender — de graça, do zero, sem barreiras.</p>
+
+        <div class="hero-buttons">
+            <a href="cadastro/quero-ser-aluno.html">
+                <button>🚀 Quero Aprender Agora</button>
+            </a>
+            <a href="cadastro/quero-ser-mentor.html">
+                <button class="btn-outline">👨‍🏫 Quero ser Mentor</button>
+            </a>
+        </div>
+
+        <!-- STATS -->
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-numero" data-alvo="5" data-sufixo="+">5+</span>
+                <span class="stat-label">Mentores Ativos</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-numero" data-alvo="5" data-sufixo="">5</span>
+                <span class="stat-label">Cursos Gratuitos</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-numero" data-alvo="5" data-sufixo="">5</span>
+                <span class="stat-label">Alunos da plataforma</span>
+            </div>
+
+             <div class="stat-item">
+                <span class="stat-numero" data-alvo="100" data-sufixo="%">100%</span>
+                <span class="stat-label">Sem Custo</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO MENTORES -->
+    <section>
+        <div class="section-titulo reveal">
+            <h2>Nossos Mentores</h2>
+            <p>Profissionais voluntários prontos para te guiar no mundo da tecnologia</p>
+        </div>
+
+        <!-- FILTROS -->
+        <div class="filtro-mentores reveal">
+            <button class="filtro-btn ativo" data-filtro="todos">Todos</button>
+            <button class="filtro-btn" data-filtro="frontend">Front-end</button>
+            <button class="filtro-btn" data-filtro="backend">Back-end</button>
+            <button class="filtro-btn" data-filtro="design">Design</button>
+        </div>
+
+        <div class="mentores">
+            <!-- GABRIEL -->
+            <div class="card reveal reveal-delay-1" data-area="frontend">
+                <div class="card-avatar">GS</div>
+                <span class="card-tag">Front-end</span>
+                <h4>Gabriel Saras</h4>
+                <p>Desenvolvedor Front-end</p>
+                <a href="Mentores/gabriel.html">
+                    <button>Ver Perfil</button>
+                </a>
+            </div>
+
+            <!-- VANESSA -->
+            <div class="card reveal reveal-delay-2" data-area="backend">
+                <div class="card-avatar">VS</div>
+                <span class="card-tag">Back-end</span>
+                <h4>Vanessa Souza</h4>
+                <p>Desenvolvedora Back-end</p>
+                <a href="Mentores/vanessa.html">
+                    <button>Ver Perfil</button>
+                </a>
+            </div>
+
+            <!-- STEFANY -->
+            <div class="card reveal reveal-delay-3" data-area="design">
+                <div class="card-avatar">ST</div>
+                <span class="card-tag">Design</span>
+                <h4>Stefany</h4>
+                <p>UI/UX Designer</p>
+                <a href="Mentores/stefany.html">
+                    <button>Ver Perfil</button>
+                </a>
+            </div>
+
+            <!-- MATHEUS -->
+            <div class="card reveal reveal-delay-4" data-area="design">
+                <div class="card-avatar">MR</div>
+                <span class="card-tag">Design</span>
+                <h4>Matheus Rocha</h4>
+                <p>Designer Gráfico</p>
+                <a href="Mentores/matheus.html">
+                    <button>Ver Perfil</button>
+                </a>
+            </div>
+
+            <!-- KAIO -->
+            <div class="card reveal reveal-delay-5" data-area="design">
+                <div class="card-avatar">KA</div>
+                <span class="card-tag">Design</span>
+                <h4>Kaio</h4>
+                <p>Designer</p>
+                <a href="Mentores/kaio.html">
+                    <button>Ver Perfil</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-marca">
+                <h3>Tech <span>For</span> All</h3>
+                <p>Democratizando o acesso à tecnologia através de mentoria voluntária gratuita. Acreditamos que conhecimento não deve ter preço.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <a href="index.html">Início</a>
+                <a href="pages/curso.html">Cursos</a>
+                <a href="Mentores/mentor.html">Mentores</a>
+            </div>
+            <div class="footer-col">
+                <h4>Participe</h4>
+                <a href="cadastro/quero-ser-aluno.html">Quero Aprender</a>
+                <a href="cadastro/quero-ser-mentor.html">Ser Mentor</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Feito com <span>♥</span> pela equipe Tech for All — 2026</p>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
