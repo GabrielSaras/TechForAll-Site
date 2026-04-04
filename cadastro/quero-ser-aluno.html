@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- FORMULÁRIO ESPECÍFICO: Inscrição de ALUNOS -->
+
+<html lang="pt-br">
+<head>
+    <!-- METADADOS DO FORMULÁRIO ALUNO -->
+    <meta charset="UTF-8">
+    <!-- Codificação para acentos -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsividade completa -->
+    
+    <title>Quero Aprender - Tech for All</title>
+    <!-- Título específico para alunos -->
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Estilos globais do projeto -->
+</head>
+
+<body>
+
+    <!-- OVERLAY MENU MOBILE -->
+    <!-- Fundo escurecido que aparece quando o menu hambúrguer está aberto -->
+    <div class="menu-overlay"></div>
+
+    <!-- HEADER: Navegação simplificada para formulário -->
+    <header>
+        <!-- Cabeçalho padrão do site -->
+        <h1>Tech <span>For</span> All</h1>
+        <!-- Logo principal com destaque na palavra "For" -->
+
+        <!-- BOTÃO HAMBÚRGUER: Visível apenas em telas mobile -->
+        <!-- Controlado pelo script.js - vira X ao abrir o menu -->
+        <button class="hamburger" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav class="menu">
+            <!-- Menu mínimo para conversão -->
+            <a href="../index.html">🏠 Início</a>
+            <!-- Volta para home -->
+            
+            <a href="../pages/curso.html">📚 Ver Cursos</a>
+            <!-- Lista de cursos disponíveis -->
+
+            <a href="../cadastro/quero-ser-mentor.html">👨‍🏫 Ser Mentor</a>
+            <!-- Link para cadastro de mentor -->
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO: Call-to-action do formulário aluno -->
+        <section>
+            <h2>🚀 Comece a Aprender Hoje!</h2>
+            <!-- Título motivacional -->
+            <p>Preencha seus dados e receba acesso gratuito aos cursos</p>
+            <!-- Descrição do benefício -->
+        </section>
+
+        <!-- FORMULÁRIO ALUNO: Coleta dados específicos -->
+        <!-- id="formAluno" é usado pelo script.js para localizar e validar o form -->
+        <section>
+            <form id="formAluno" class="form-principal">
+
+                <!-- DADOS PESSOAIS -->
+                <h3>📋 Seus Dados</h3>
+                <!-- Agrupamento visual dos campos pessoais -->
+                
+                <input type="text" 
+                       id="nomeAluno" 
+                       placeholder="Nome Completo *" 
+                       required>
+                <!-- Campo obrigatório - mínimo 3 caracteres (validado no JS) -->
+                
+                <input type="email" 
+                       id="emailAluno" 
+                       placeholder="Email *" 
+                       required>
+                <!-- Validação de formato de email feita no script.js -->
+                
+                <input type="tel" 
+                       id="whatsappAluno" 
+                       placeholder="WhatsApp (com DDD)">
+                <!-- Contato principal - campo opcional para alunos -->
+
+                <!-- PREFERÊNCIAS DE CURSO -->
+                <h3>🎯 Qual curso você quer?</h3>
+                <!-- Agrupamento de preferências -->
+                
+                <!-- id="cursoPreferido" referenciado no script.js para validação -->
+                <select id="cursoPreferido" required>
+                    <option value="">Selecione um curso</option>
+                    <!-- Opção padrão vazia - obrigatório selecionar uma opção -->
+                    <option value="web">💻 Desenvolvimento Web (HTML/CSS/JS)</option>
+                    <option value="python">🐍 Python Completo</option>
+                    <option value="uiux">🎨 UI/UX Design</option>
+                    <option value="banco">🗄️ Banco de Dados (SQL)</option>
+                    <option value="logica">🧠 Lógica de Programação</option>
+                </select>
+
+                <!-- EXPERIÊNCIA ATUAL -->
+                <h3>📊 Seu nível atual</h3>
+                <!-- Agrupamento de nível de conhecimento -->
+                
+                <!-- id="nivelAtual" referenciado no script.js para validação -->
+                <select id="nivelAtual" required>
+                    <option value="">Qual seu conhecimento?</option>
+                    <option value="zero">Nunca programei</option>
+                    <option value="basico">Sei o básico</option>
+                    <option value="medio">Tenho algum conhecimento</option>
+                    <option value="avancado">Já desenvolvo projetos</option>
+                </select>
+
+                <!-- BOTÕES DE AÇÃO -->
+                <!-- type="submit" dispara o evento submit capturado no script.js -->
+                <div class="form-buttons">
+                    <button type="submit" class="btn-primary">
+                        ✅ Inscrever Gratuitamente
+                    </button>
+                    <!-- Botão principal de conversão -->
+                    <!-- Ao clicar: script.js valida os campos e exibe modal de sucesso -->
+                </div>
+            </form>
+        </section>
+
+        <!-- ALTERNATIVA: Botão voltar separado do formulário -->
+        <section class="voltar-section">
+            <a href="../index.html">
+                <button class="btn-secundario">⬅️ Voltar ao Início</button>
+            </a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-marca">
+                <h3>Tech <span>For</span> All</h3>
+                <p>Democratizando o acesso à tecnologia através de mentoria voluntária gratuita.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <a href="../index.html">Início</a>
+                <a href="../pages/curso.html">Cursos</a>
+                <a href="../Mentores/mentor.html">Mentores</a>
+            </div>
+            <div class="footer-col">
+                <h4>Participe</h4>
+                <a href="../cadastro/quero-ser-aluno.html">Quero Aprender</a>
+                <a href="../cadastro/quero-ser-mentor.html">Ser Mentor</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Feito com <span>♥</span> pela equipe Tech for All — Gabs · 2025</p>
+        </div>
+    </footer>
+
+    <!-- VALIDAÇÃO E FUNCIONALIDADE JS -->
+    <!-- script.js detecta o id="formAluno" e aplica toda a validação automaticamente -->
+    <script src="../script/script.js"></script>
+</body>
+</html>

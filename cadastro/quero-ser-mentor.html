@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!-- FORMULÁRIO ESPECÍFICO: Cadastro de MENTORES VOLUNTÁRIOS -->
+
+<html lang="pt-br">
+<head>
+    <!-- METADADOS DO FORMULÁRIO MENTOR -->
+    <meta charset="UTF-8">
+    <!-- Codificação para acentos -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsividade completa -->
+    
+    <title>Quero Ser Mentor - Tech for All</title>
+    <!-- Título específico para mentores -->
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Estilos globais do projeto -->
+</head>
+
+<body>
+
+    <!-- OVERLAY MENU MOBILE -->
+    <!-- Fundo escurecido que aparece quando o menu hambúrguer está aberto -->
+    <div class="menu-overlay"></div>
+
+    <!-- HEADER: Navegação para mentor -->
+    <header>
+        <h1>Tech <span>For</span> All</h1>
+        <!-- Logo principal com destaque na palavra "For" -->
+
+        <!-- BOTÃO HAMBÚRGUER: Visível apenas em telas mobile -->
+        <!-- Controlado pelo script.js - vira X ao abrir o menu -->
+        <button class="hamburger" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="menu">
+            <a href="../index.html">🏠 Início</a>
+            <!-- Home principal -->
+            
+            <a href="../Mentores/mentor.html">👥 Ver Mentores</a>
+            <!-- Lista atual de mentores -->
+
+            <a href="../cadastro/quero-ser-aluno.html" class="btn-menu">🚀 Quero Aprender</a>
+            <!-- Link para inscrição de alunos -->
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO: Convite para mentoria -->
+        <section>
+            <h2>👨‍🏫 Seja Nosso Mentor!</h2>
+            <!-- Título específico para mentores -->
+            
+            <p>Compartilhe seu conhecimento e mude vidas através da tecnologia</p>
+            <!-- Mensagem inspiradora -->
+        </section>
+
+        <!-- FORMULÁRIO MENTOR: Dados profissionais -->
+        <!-- id="formMentor" é usado pelo script.js para localizar e validar o form -->
+        <section>
+            <form id="formMentor" class="form-principal">
+
+                <!-- IDENTIFICAÇÃO -->
+                <h3>👤 Quem você é?</h3>
+                <!-- Agrupamento dos dados de identificação -->
+                
+                <input type="text" 
+                       id="nomeMentor" 
+                       placeholder="Nome Completo *" 
+                       required>
+                <!-- Campo obrigatório - mínimo 3 caracteres (validado no JS) -->
+                
+                <input type="email" 
+                       id="emailMentor" 
+                       placeholder="Email Profissional *" 
+                       required>
+                <!-- Validação de formato de email feita no script.js -->
+                
+                <input type="tel" 
+                       id="whatsappMentor" 
+                       placeholder="WhatsApp para contato * (com DDD)" 
+                       required>
+                <!-- Obrigatório para mentores - validado: mínimo 10 dígitos com DDD -->
+
+                <!-- EXPERIÊNCIA PROFISSIONAL -->
+                <h3>💼 Sua Experiência</h3>
+                <!-- Agrupamento de experiência e trajetória -->
+                
+                <!-- id="experiencia" referenciado no JS para validação e contador de chars -->
+                <textarea id="experiencia" 
+                          placeholder="Conte sobre sua experiência em TI (mín. 100 caracteres)" 
+                          rows="5" 
+                          required></textarea>
+                <!-- Área de texto longa - mínimo 100 caracteres -->
+                <!-- script.js adiciona contador de caracteres em tempo real abaixo deste campo -->
+
+                <!-- ÁREAS DE ENSINO -->
+                <h3>🎓 O que você ensina?</h3>
+                <!-- Agrupamento das especialidades do mentor -->
+                
+                <!-- Múltipla escolha - ao menos 1 obrigatória (validado no JS) -->
+                <!-- Os values são usados no modal de sucesso para listar as áreas escolhidas -->
+                <div class="areas-ensino">
+                    <label><input type="checkbox" value="HTML/CSS"> HTML/CSS</label>
+                    <label><input type="checkbox" value="JavaScript"> JavaScript</label>
+                    <label><input type="checkbox" value="React"> React</label>
+                    <label><input type="checkbox" value="Python"> Python</label>
+                    <label><input type="checkbox" value="Design"> Design</label>
+                    <label><input type="checkbox" value="Banco de Dados"> Banco de Dados</label>
+                </div>
+
+                <!-- DISPONIBILIDADE -->
+                <h3>📅 Quando pode ensinar?</h3>
+                <!-- Agrupamento de disponibilidade de horários -->
+                
+                <input type="text" 
+                       id="diasDisponiveis" 
+                       placeholder="Ex: Seg, Qua, Sex">
+                <!-- Dias disponíveis em formato livre -->
+                
+                <input type="time" 
+                       id="horarioInicio">
+                <!-- Horário de início das aulas -->
+
+                <!-- CONFIRMAÇÃO -->
+                <!-- type="submit" dispara o evento submit capturado no script.js -->
+                <div class="form-buttons">
+                    <button type="submit" class="btn-primary">
+                        🎯 Confirmar como Mentor
+                    </button>
+                    <!-- Ao clicar: script.js valida todos os campos e exibe modal de sucesso -->
+                </div>
+            </form>
+        </section>
+
+        <!-- NAVEGAÇÃO DE VOLTA -->
+        <section class="voltar-section">
+            <a href="../index.html">
+                <button class="btn-secundario">⬅️ Voltar</button>
+            </a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-marca">
+                <h3>Tech <span>For</span> All</h3>
+                <p>Democratizando o acesso à tecnologia através de mentoria voluntária gratuita.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <a href="../index.html">Início</a>
+                <a href="../pages/curso.html">Cursos</a>
+                <a href="../Mentores/mentor.html">Mentores</a>
+            </div>
+            <div class="footer-col">
+                <h4>Participe</h4>
+                <a href="../cadastro/quero-ser-aluno.html">Quero Aprender</a>
+                <a href="../cadastro/quero-ser-mentor.html">Ser Mentor</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Feito com <span>♥</span> pela equipe Tech for All — Gabs · 2025</p>
+        </div>
+    </footer>
+
+    <!-- PROCESSAMENTO DO FORMULÁRIO MENTOR -->
+    <!-- script.js detecta o id="formMentor" e aplica toda a validação automaticamente -->
+    <script src="../script/script.js"></script>
+</body>
+</html>
