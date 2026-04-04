@@ -3,29 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech for All - Mentoria Gratuita</title>
+
+    <!-- SEO: Descrição para mecanismos de busca -->
+    <meta name="description" content="Tech for All — Plataforma gratuita de mentoria em tecnologia. Conectamos mentores voluntários a quem quer aprender do zero.">
+
+    <title>Tech for All - Mentoria Gratuita em Tecnologia</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- OVERLAY MENU MOBILE -->
-    <div class="menu-overlay"></div>
+    <!-- ============================================================
+         OVERLAY: Fundo escurecido do menu mobile
+         Controlado pelo script.js — aparece ao abrir o hambúrguer
+         ============================================================ -->
+    <div class="menu-overlay" role="presentation" aria-hidden="true"></div>
 
-    <!-- HEADER -->
-    <header>
-        <h1>Tech <span>For</span> All</h1>
+    <!-- ============================================================
+         HEADER: Cabeçalho fixo com logo e navegação principal
+         position: sticky no CSS — acompanha o scroll do usuário
+         ============================================================ -->
+    <header role="banner">
 
-        <!-- BOTÃO HAMBÚRGUER (aparece só no mobile) -->
-        <button class="hamburger" aria-label="Abrir menu">
+        <!-- Logo: clicável, leva de volta à home -->
+        <a href="index.html" class="logo-link" aria-label="Tech for All — Página Inicial">
+            <h1>Tech <span>For</span> All</h1>
+        </a>
+
+        <!-- Botão hambúrguer: visível apenas no mobile (max-width: 768px)
+             aria-expanded muda via JS para indicar estado ao leitor de tela -->
+        <button class="hamburger"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+                aria-controls="menu-principal">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
-        <!-- MENU DE NAVEGAÇÃO -->
-        <nav class="menu">
-            <a href="index.html">🏠 Início</a>
+        <!-- Navegação principal
+             id="menu-principal" referenciado pelo aria-controls do hambúrguer -->
+        <nav class="menu" id="menu-principal" role="navigation" aria-label="Menu principal">
+            <a href="index.html" aria-current="page">🏠 Início</a>
             <a href="pages/curso.html">📚 Cursos</a>
             <a href="Mentores/mentor.html">👥 Mentores</a>
             <a href="cadastro/quero-ser-mentor.html">👨‍🏫 Ser Mentor</a>
@@ -33,144 +52,197 @@
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <span class="hero-badge">✨ Plataforma 100% Gratuita</span>
+    <!-- ============================================================
+         MAIN: Conteúdo principal da página
+         Agrupa o hero e a seção de mentores
+         ============================================================ -->
+    <main>
 
-        <h2>Tecnologia não é<br><span class="destaque">Privilégio.</span></h2>
-        <h3>É conhecimento para todos.</h3>
+        <!-- ============================================================
+             HERO SECTION: Apresentação principal da plataforma
+             Contém: badge, título, subtítulo, CTAs e estatísticas
+             Animação de fundo via CSS (@keyframes pulseGlow)
+             ============================================================ -->
+        <section class="hero" aria-labelledby="hero-titulo">
 
-        <p>Conectando voluntários em tecnologia com quem quer aprender — de graça, do zero, sem barreiras.</p>
+            <!-- Badge de destaque — posicionado acima do título -->
+            <span class="hero-badge" role="text">✨ Plataforma 100% Gratuita</span>
 
-        <div class="hero-buttons">
-            <a href="cadastro/quero-ser-aluno.html">
-                <button>🚀 Quero Aprender Agora</button>
-            </a>
-            <a href="cadastro/quero-ser-mentor.html">
-                <button class="btn-outline">👨‍🏫 Quero ser Mentor</button>
-            </a>
-        </div>
+            <!-- Título principal — id referenciado no aria-labelledby da section -->
+            <h2 id="hero-titulo">
+                Tecnologia não é<br>
+                <span class="destaque">Privilégio.</span>
+            </h2>
 
-        <!-- STATS -->
-        <div class="hero-stats">
-            <div class="stat-item">
-                <span class="stat-numero" data-alvo="5" data-sufixo="+">5+</span>
-                <span class="stat-label">Mentores Ativos</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-numero" data-alvo="5" data-sufixo="">5</span>
-                <span class="stat-label">Cursos Gratuitos</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-numero" data-alvo="5" data-sufixo="">5</span>
-                <span class="stat-label">Alunos da plataforma</span>
-            </div>
+            <h3>É conhecimento para todos.</h3>
 
-             <div class="stat-item">
-                <span class="stat-numero" data-alvo="100" data-sufixo="%">100%</span>
-                <span class="stat-label">Sem Custo</span>
-            </div>
+            <p>Conectando voluntários em tecnologia com quem quer aprender —
+               de graça, do zero, sem barreiras.</p>
 
-        </div>
-    </section>
-
-    <!-- SEÇÃO MENTORES -->
-    <section>
-        <div class="section-titulo reveal">
-            <h2>Nossos Mentores</h2>
-            <p>Profissionais voluntários prontos para te guiar no mundo da tecnologia</p>
-        </div>
-
-        <!-- FILTROS -->
-        <div class="filtro-mentores reveal">
-            <button class="filtro-btn ativo" data-filtro="todos">Todos</button>
-            <button class="filtro-btn" data-filtro="frontend">Front-end</button>
-            <button class="filtro-btn" data-filtro="backend">Back-end</button>
-            <button class="filtro-btn" data-filtro="design">Design</button>
-        </div>
-
-        <div class="mentores">
-            <!-- GABRIEL -->
-            <div class="card reveal reveal-delay-1" data-area="frontend">
-                <div class="card-avatar">GS</div>
-                <span class="card-tag">Front-end</span>
-                <h4>Gabriel Saras</h4>
-                <p>Desenvolvedor Front-end</p>
-                <a href="Mentores/gabriel.html">
-                    <button>Ver Perfil</button>
+            <!-- Botões de ação (CTA) -->
+            <div class="hero-buttons">
+                <a href="cadastro/quero-ser-aluno.html">
+                    <button type="button">🚀 Quero Aprender Agora</button>
+                </a>
+                <a href="cadastro/quero-ser-mentor.html">
+                    <button type="button" class="btn-outline">👨‍🏫 Quero ser Mentor</button>
                 </a>
             </div>
 
-            <!-- VANESSA -->
-            <div class="card reveal reveal-delay-2" data-area="backend">
-                <div class="card-avatar">VS</div>
-                <span class="card-tag">Back-end</span>
-                <h4>Vanessa Souza</h4>
-                <p>Desenvolvedora Back-end</p>
-                <a href="Mentores/vanessa.html">
-                    <button>Ver Perfil</button>
-                </a>
+            <!-- Estatísticas animadas
+                 data-alvo    = valor final do contador (JS anima de 0 até este valor)
+                 data-sufixo  = caractere exibido após o número (+, %, etc.)
+                 A animação usa requestAnimationFrame no script.js -->
+            <div class="hero-stats" role="list" aria-label="Estatísticas da plataforma">
+                <div class="stat-item" role="listitem">
+                    <span class="stat-numero" data-alvo="5" data-sufixo="+">5+</span>
+                    <span class="stat-label">Mentores Ativos</span>
+                </div>
+                <div class="stat-item" role="listitem">
+                    <span class="stat-numero" data-alvo="5" data-sufixo="">5</span>
+                    <span class="stat-label">Cursos Gratuitos</span>
+                </div>
+                <div class="stat-item" role="listitem">
+                    <span class="stat-numero" data-alvo="5" data-sufixo="">5</span>
+                    <span class="stat-label">Alunos na Plataforma</span>
+                </div>
+                <div class="stat-item" role="listitem">
+                    <span class="stat-numero" data-alvo="100" data-sufixo="%">100%</span>
+                    <span class="stat-label">Sem Custo</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SEÇÃO MENTORES: Lista os mentores cadastrados na plataforma
+             Contém: título, filtros por área e cards dos mentores
+             Filtros controlados por JS (funcionalidade 6 do script.js)
+             Cards animados via Scroll Reveal (funcionalidade 2)
+             ============================================================ -->
+        <section aria-labelledby="titulo-mentores">
+
+            <!-- Título da seção -->
+            <div class="section-titulo reveal">
+                <h2 id="titulo-mentores">Nossos Mentores</h2>
+                <p>Profissionais voluntários prontos para te guiar no mundo da tecnologia</p>
             </div>
 
-            <!-- STEFANY -->
-            <div class="card reveal reveal-delay-3" data-area="design">
-                <div class="card-avatar">ST</div>
-                <span class="card-tag">Design</span>
-                <h4>Stefany</h4>
-                <p>UI/UX Designer</p>
-                <a href="Mentores/stefany.html">
-                    <button>Ver Perfil</button>
-                </a>
+            <!-- Filtros por área de atuação
+                 data-filtro = valor comparado com data-area dos cards
+                 Classe "ativo" marca o filtro selecionado (estilo CSS + JS) -->
+            <div class="filtro-mentores reveal" role="group" aria-label="Filtrar mentores por área">
+                <button class="filtro-btn ativo" data-filtro="todos" type="button" aria-pressed="true">Todos</button>
+                <button class="filtro-btn" data-filtro="frontend" type="button" aria-pressed="false">Front-end</button>
+                <button class="filtro-btn" data-filtro="backend"  type="button" aria-pressed="false">Back-end</button>
+                <button class="filtro-btn" data-filtro="design"   type="button" aria-pressed="false">Design</button>
             </div>
 
-            <!-- MATHEUS -->
-            <div class="card reveal reveal-delay-4" data-area="design">
-                <div class="card-avatar">MR</div>
-                <span class="card-tag">Design</span>
-                <h4>Matheus Rocha</h4>
-                <p>Designer Gráfico</p>
-                <a href="Mentores/matheus.html">
-                    <button>Ver Perfil</button>
-                </a>
-            </div>
+            <!-- Grade de cards dos mentores
+                 data-area = categoria usada pelo filtro JS
+                 reveal + reveal-delay-N = animação de entrada escalonada (scroll reveal) -->
+            <div class="mentores" role="list" aria-label="Lista de mentores">
 
-            <!-- KAIO -->
-            <div class="card reveal reveal-delay-5" data-area="design">
-                <div class="card-avatar">KA</div>
-                <span class="card-tag">Design</span>
-                <h4>Kaio</h4>
-                <p>Designer</p>
-                <a href="Mentores/kaio.html">
-                    <button>Ver Perfil</button>
-                </a>
-            </div>
-        </div>
-    </section>
+                <!-- Card: Gabriel Saras — Front-end -->
+                <article class="card reveal reveal-delay-1" data-area="frontend" role="listitem">
+                    <div class="card-avatar" aria-hidden="true">GS</div>
+                    <span class="card-tag">Front-end</span>
+                    <h4>Gabriel Saras</h4>
+                    <p>Desenvolvedor Front-end</p>
+                    <a href="Mentores/gabriel.html" aria-label="Ver perfil de Gabriel Saras">
+                        <button type="button">Ver Perfil</button>
+                    </a>
+                </article>
 
-    <!-- FOOTER -->
-    <footer>
+                <!-- Card: Vanessa Souza — Back-end -->
+                <article class="card reveal reveal-delay-2" data-area="backend" role="listitem">
+                    <div class="card-avatar" aria-hidden="true">VS</div>
+                    <span class="card-tag">Back-end</span>
+                    <h4>Vanessa Souza</h4>
+                    <p>Desenvolvedora Back-end</p>
+                    <a href="Mentores/vanessa.html" aria-label="Ver perfil de Vanessa Souza">
+                        <button type="button">Ver Perfil</button>
+                    </a>
+                </article>
+
+                <!-- Card: Stefany — Design -->
+                <article class="card reveal reveal-delay-3" data-area="design" role="listitem">
+                    <div class="card-avatar" aria-hidden="true">ST</div>
+                    <span class="card-tag">Design</span>
+                    <h4>Stefany Moreira</h4>
+                    <p>UI/UX Designer</p>
+                    <a href="Mentores/stefany.html" aria-label="Ver perfil de Stefany Moreira">
+                        <button type="button">Ver Perfil</button>
+                    </a>
+                </article>
+
+                <!-- Card: Matheus Rocha — Design -->
+                <article class="card reveal reveal-delay-4" data-area="design" role="listitem">
+                    <div class="card-avatar" aria-hidden="true">MR</div>
+                    <span class="card-tag">Design</span>
+                    <h4>Matheus Rocha</h4>
+                    <p>Designer Gráfico</p>
+                    <a href="Mentores/matheus.html" aria-label="Ver perfil de Matheus Rocha">
+                        <button type="button">Ver Perfil</button>
+                    </a>
+                </article>
+
+                <!-- Card: Kaio Eduardo — Design -->
+                <article class="card reveal reveal-delay-5" data-area="design" role="listitem">
+                    <div class="card-avatar" aria-hidden="true">KA</div>
+                    <span class="card-tag">Design</span>
+                    <h4>Kaio Eduardo</h4>
+                    <p>Designer</p>
+                    <a href="Mentores/kaio.html" aria-label="Ver perfil de Kaio Eduardo">
+                        <button type="button">Ver Perfil</button>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+    </main><!-- /main -->
+
+    <!-- ============================================================
+         FOOTER: Rodapé com links de navegação e créditos
+         Grid de 3 colunas no desktop, 1 coluna no mobile (CSS)
+         ============================================================ -->
+    <footer role="contentinfo">
         <div class="footer-grid">
+
+            <!-- Coluna 1: Marca e descrição -->
             <div class="footer-marca">
                 <h3>Tech <span>For</span> All</h3>
-                <p>Democratizando o acesso à tecnologia através de mentoria voluntária gratuita. Acreditamos que conhecimento não deve ter preço.</p>
+                <p>Democratizando o acesso à tecnologia através de mentoria
+                   voluntária gratuita. Acreditamos que conhecimento não deve ter preço.</p>
             </div>
-            <div class="footer-col">
+
+            <!-- Coluna 2: Navegação rápida -->
+            <nav class="footer-col" aria-label="Links de navegação do rodapé">
                 <h4>Navegação</h4>
                 <a href="index.html">Início</a>
                 <a href="pages/curso.html">Cursos</a>
                 <a href="Mentores/mentor.html">Mentores</a>
-            </div>
-            <div class="footer-col">
+            </nav>
+
+            <!-- Coluna 3: Links de participação -->
+            <nav class="footer-col" aria-label="Links para participar da plataforma">
                 <h4>Participe</h4>
                 <a href="cadastro/quero-ser-aluno.html">Quero Aprender</a>
                 <a href="cadastro/quero-ser-mentor.html">Ser Mentor</a>
-            </div>
+            </nav>
         </div>
+
+        <!-- Linha de crédito -->
         <div class="footer-bottom">
-            <p>Feito com <span>♥</span> pela equipe Tech for All — 2026</p>
+            <p>Feito com <span aria-label="amor">♥</span> pela equipe Tech for All — 2026</p>
         </div>
     </footer>
 
+    <!-- ============================================================
+         SCRIPT PRINCIPAL
+         Carregado no final do body para não bloquear a renderização
+         Contém: menu mobile, scroll reveal, validações, filtros, etc.
+         ============================================================ -->
     <script src="script/script.js"></script>
+
 </body>
 </html>
