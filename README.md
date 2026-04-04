@@ -20,15 +20,15 @@ JavaScript → Interatividade e funcionalidades
 
 👨‍💻 Integrantes do Projeto:
 
-Gabriel Saras — RA:
+Gabriel Saras — RA: 25058772-2
 
-Vanessa Cristina — RA:
+Vanessa C. Souza — RA: 25356515-2
 
-Stefani — RA:
+Stefany M. Moreira — RA: 25270134-2
 
-Kaio Eduardo — RA:
+Kaio Eduardo — RA: 25127228-2
 
-Mateus Ricardo — RA:
+Matheus R. Rocha — RA: 25161131-2
 
 🎯 Objetivo do Projeto
 
@@ -46,7 +46,10 @@ Permitir inscrição através de formulário
 
 techforall-site
 │
-├── index.html
+├── Mentores
+|     └──gabriel.html
+|     └──kaio.html
+|     └── ...
 │
 ├── pages
 │ └── cursos.html
