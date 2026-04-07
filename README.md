@@ -68,36 +68,36 @@ Números das estatísticas do hero animam de 0 até o valor final ao entrar na v
 
 ## 📂 Estrutura do Projeto
 
-TECH_FOR_ALL/
-├── cadastro/
-│   ├── quero-ser-aluno.html
-│   └── quero-ser-mentor.html
-├── css/
-│   └── style.css
-├── Mentores/
-│   ├── gabriel.html
-│   ├── kaio.html
-│   ├── matheus.html
-│   ├── mentor.html
-│   ├── stefany.html
-│   └── vanessa.html
-├── pages/
-│   ├── imagens/
-│   │   ├── img_mentores/
-│   │   │   ├── gabriel.jpg
-│   │   │   ├── kaio.jpeg
-│   │   │   ├── matheus.jpeg
-│   │   │   └── vanessa.png
-│   │   ├── bancodedados.png
-│   │   ├── cursopy.png
-│   │   ├── devweb.png
-│   │   ├── inteligenciaartificial.png
-│   │   ├── logicadeprog.png
-│   │   └── uiuxdesign.png
-│   └── curso.html
-├── script/
-│   └── script.js
-└── index.html
+TECH_FOR_ALL/  
+├── cadastro/  
+│   ├── quero-ser-aluno.html  
+│   └── quero-ser-mentor.html  
+├── css/  
+│   └── style.css  
+├── Mentores/  
+│   ├── gabriel.html  
+│   ├── kaio.html  
+│   ├── matheus.html  
+│   ├── mentor.html  
+│   ├── stefany.html  
+│   └── vanessa.html  
+├── pages/  
+│   ├── imagens/  
+│   │   ├── img_mentores/  
+│   │   │   ├── gabriel.jpg  
+│   │   │   ├── kaio.jpeg  
+│   │   │   ├── matheus.jpeg  
+│   │   │   └── vanessa.png  
+│   │   ├── bancodedados.png  
+│   │   ├── cursopy.png  
+│   │   ├── devweb.png  
+│   │   ├── inteligenciaartificial.png  
+│   │   ├── logicadeprog.png  
+│   │   └── uiuxdesign.png  
+│   └── curso.html  
+├── script/  
+│   └── script.js  
+└── index.html  
 ---
 
 ---
